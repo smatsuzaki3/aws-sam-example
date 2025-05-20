@@ -21,7 +21,7 @@ export const lambdaHandler = async (event: Event, _context, callback) => {
         return {
             statusCode: 200,
             body: JSON.stringify({
-                message: 'hello world - func1',
+                message: 'hello world - func2',
             }),
         };
     } catch (err) {
