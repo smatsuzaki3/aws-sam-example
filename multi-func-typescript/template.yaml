@@ -14,8 +14,9 @@ Resources:
   HelloWorldFunction1:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
+      # CodeUriはpackaje.jsonが格納されたディレクトリを指定する必要がある
       CodeUri: hello-world/
-      # 注意 : ↓のdot以降は、実際の関数名と整合させること
+      # 関数実行時に呼び出すべきエントリポイント、dot以降は、実際の関数名と整合させること
       Handler: app.lambdaHandler
       Runtime: nodejs22.x
       Architectures:
@@ -32,8 +33,9 @@ Resources:
   HelloWorldFunction2:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
+      # CodeUriはpackaje.jsonが格納されたディレクトリを指定する必要がある
       CodeUri: hello-world/
-      # 注意 : ↓のdot以降は、実際の関数名と整合させること
+      # 関数実行時に呼び出すべきエントリポイント、dot以降は、実際の関数名と整合させること
       Handler: app2.lambdaHandler
       Runtime: nodejs22.x
       Architectures:
