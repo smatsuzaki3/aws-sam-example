@@ -16,7 +16,7 @@ Resources:
     Properties:
       # CodeUriはpackaje.jsonが格納されたディレクトリを指定する必要がある
       CodeUri: hello-world/
-      # 関数実行時に呼び出すべきエントリポイント、dot以降は、実際の関数名と整合させること
+      # 関数実行時に呼び出すべきエントリポイント、dot以降は実際の関数名と整合させること
       Handler: app.lambdaHandler
       Runtime: nodejs22.x
       Architectures:
@@ -27,6 +27,7 @@ Resources:
         Minify: true
         Target: "es2020"
         Sourcemap: true
+        # バンドル処理を開始する際の「元となるソースファイル」を指定
         EntryPoints: 
         - app.ts
 
@@ -35,7 +36,7 @@ Resources:
     Properties:
       # CodeUriはpackaje.jsonが格納されたディレクトリを指定する必要がある
       CodeUri: hello-world/
-      # 関数実行時に呼び出すべきエントリポイント、dot以降は、実際の関数名と整合させること
+      # 関数実行時に呼び出すべきエントリポイント、dot以降は実際の関数名と整合させること
       Handler: app2.lambdaHandler
       Runtime: nodejs22.x
       Architectures:
@@ -46,5 +47,6 @@ Resources:
         Minify: true
         Target: "es2020"
         Sourcemap: true
+        # バンドル処理を開始する際の「元となるソースファイル」を指定
         EntryPoints: 
         - app2.ts
