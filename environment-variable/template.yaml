@@ -25,6 +25,7 @@ Resources:
       CodeUri: hello-world/
       Handler: app.lambdaHandler
       Runtime: nodejs22.x
+      FunctionName: !Sub "${ENV}-hello-world-function"
       Architectures:
         - x86_64
       # 以下の定義がないと、process.envで取得できない。

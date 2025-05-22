@@ -13,6 +13,12 @@ Parameters:
     Default: test
 ```
 
+template.yaml内での利用例は以下。
+
+```yaml
+FunctionName: !Sub "${ENV}-hello-world-function"
+```
+
 2. template.yaml 内のラムダ関数定義に以下を追加することで、Lambdaの実行ランタイム内でLinuxの環境変数として、exportされる
 
 ```yaml
