@@ -1,6 +1,6 @@
 # AWS-SAMにおける環境変数の定義
 
-1. template.yaml 内で、Parameterを定義することでCFnテンプレートの実行時に該当の変数が利用可能になる。
+1. template.yaml 内で、 `Parameters` を定義することでCFnテンプレートの実行時に該当の変数が利用可能になる。
 
 ```yaml
 Parameters:
